@@ -1,0 +1,19 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"cleanOutputDir": true,
+	"emit": "true",
+	"entryPoints": ["src/index.ts"],
+	"excludeExternals": false,
+	"hideGenerator": true,
+	"lightHighlightTheme": "github-light",
+	"darkHighlightTheme": "github-dark",
+	"markedOptions": {
+		"gfm": true,
+		"mangle": false,
+		"smartypants": true
+	},
+	"name": "FoV Utilities",
+	"out": "./docs/",
+	"readme": "./README.md",
+	"tsconfig": "./src/tsconfig.json"
+}

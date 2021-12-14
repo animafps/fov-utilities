@@ -1,6 +1,8 @@
 {
 	"name": "fov-utilities",
+	"version": "0.0.0",
 	"license": "GPL-3.0-or-later",
+	"description": "Set of helper functions to calculate different FoVs based off the FILM notation standard of FoV scaling and aspect ratio.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"bugs": {
@@ -18,6 +20,7 @@
 		"lint": "eslint src --ext ts --fix",
 		"format": "prettier --write {src,tests}/**/*.ts",
 		"build": "tsc -b src",
+		"build:deno": "node ./scripts/deno.mjs",
 		"clean": "tsc -b src --clean",
 		"watch": "tsc -b src -w",
 		"commit": "git-cz",
@@ -25,7 +28,8 @@
 		"update": "yarn upgrade-interactive",
 		"release": "standard-version",
 		"pretty-quick": "pretty-quick --staged --pattern '{src,tests}/**/*.ts'",
-		"postinstall": "husky install"
+		"postinstall": "husky install",
+		"docs": "typedoc"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^15.0.0",
