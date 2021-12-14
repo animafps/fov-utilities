@@ -13,12 +13,32 @@
 Set of helper functions to calculate different FoVs based off the FILM notation standard of FoV scaling and aspect ratio.
 It was developed for the use in [FPSMath discord bot](https://fpsmath.xyz).
 
-### Installation
+## Installation
 
-You can use the following command to install this package, or replace `npm install` with your package manager of choice.
+### Node
 
-```shell
+Install with [npm](https://www.npmjs.com/) / [yarn](https://yarnpkg.com) / [pnpm](https://pnpm.js.org/):
+
+```sh
 npm install fov-utilities
+yarn add fov-utilities
+pnpm add fov-utilities
+```
+
+### Deno
+
+We also provide typings compatible with the [deno](https://deno.land/) runtime. You have 2 ways you can import them:
+
+1. Directly from GitHub
+
+```ts
+import { convertFOV } from 'https://raw.githubusercontent.com/animafps/fov-utilities/main/deno/mod.ts';
+```
+
+2. From [deno.land/x](https://deno.land/x)
+
+```ts
+import { convertFOV } from 'https://deno.land/x/fov/mod.ts';
 ```
 
 ## API Docs
