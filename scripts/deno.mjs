@@ -114,10 +114,7 @@ async function adaptFolderToDeno(
 		if (!file.name.endsWith('.ts')) continue
 
 		const fullFilePath = new URL(file.name, nodeDirectory)
-		const finalDenoPath = new URL(
-			file.name.includes('index') ? 'mod.ts' : file.name,
-			denoDirectory
-		)
+		const finalDenoPath = new URL(file.name, denoDirectory)
 
 		await convertFile(fullFilePath, finalDenoPath)
 	}
@@ -131,6 +128,8 @@ const folderResults = await Promise.allSettled(
 for (const result of folderResults) {
 	if (result.status === 'rejected') console.error(result.reason)
 }
+
+await writeFile(new URL('mod.ts', denoPath), "export * from './src/index.ts'")
 
 // Copy over core files
 const copyResults = await Promise.allSettled(
