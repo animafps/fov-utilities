@@ -5,6 +5,17 @@
 	"description": "Set of helper functions to calculate different FoVs based off the FILM notation standard of FoV scaling and aspect ratio.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"module": "dist/index.mjs",
+	"exports": {
+		"import": "./dist/index.mjs",
+		"require": "./dist/index.js",
+		"default": "./dist/index.mjs"
+	},
+	"keywords": [
+		"field-of-view",
+		"fov",
+		"helper"
+	],
 	"bugs": {
 		"url": "https://github.com/animafps/fov-utilities/issues"
 	},
@@ -14,13 +25,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/animafps/utilities.git"
+		"url": "https://github.com/animafps/fov-utilities"
 	},
 	"homepage": "https://animafps.github.io/fov-utilities",
 	"scripts": {
 		"lint": "eslint src --ext ts --fix",
 		"format": "prettier --write {src,tests}/**/*.ts",
-		"build": "tsc -b src",
+		"build": "tsc -b src && gen-esm-wrapper dist/index.js dist/index.mjs",
 		"build:deno": "node ./scripts/deno.mjs",
 		"clean": "tsc -b src --clean",
 		"watch": "tsc -b src -w",
@@ -45,6 +56,7 @@
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.4.1",
 		"eslint-config-prettier": "^8.3.0",
+		"gen-esm-wrapper": "^1.1.3",
 		"husky": "^7.0.4",
 		"lint-staged": "^12.1.2",
 		"pinst": "^2.1.6",

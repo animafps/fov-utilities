@@ -27,7 +27,7 @@ pnpm add fov-utilities
 
 ### Deno
 
-We also provide typings compatible with the [deno](https://deno.land/) runtime. You have 2 ways you can import them:
+We also provide typings compatible with the [deno](https://deno.land/) runtime. You have 3 ways you can import them:
 
 1. Directly from GitHub
 
@@ -39,6 +39,12 @@ import { convertFOV } from 'https://raw.githubusercontent.com/animafps/fov-utili
 
 ```ts
 import { convertFOV } from 'https://deno.land/x/fov/mod.ts';
+```
+
+3. From [skypack.dev](https://www.skypack.dev/)
+
+```ts
+import { convertFOV } from 'https://cdn.skypack.dev/fov-utilities?dts';
 ```
 
 ## API Docs
