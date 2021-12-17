@@ -27,7 +27,7 @@
 		"type": "git",
 		"url": "https://github.com/animafps/fov-utilities"
 	},
-	"homepage": "https://animafps.github.io/fov-utilities",
+	"homepage": "https://fov.js.org",
 	"scripts": {
 		"lint": "eslint src --ext ts --fix",
 		"format": "prettier --write {src,tests}/**/*.ts",

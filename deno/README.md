@@ -49,4 +49,4 @@ import { convertFOV } from 'https://cdn.skypack.dev/fov-utilities?dts';
 
 ## API Docs
 
-Api docs are hosted at <https://animafps.github.io/fov-utilities>
+Api docs are hosted at <https://fov.js.org>
