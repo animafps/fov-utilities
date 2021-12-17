@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/animafps/fov-utilities/compare/v1.0.2...v1.1.0) (2021-12-17)
+
+
+### Features
+
+* improved types and added aspect ratio utilities ([352b71e](https://github.com/animafps/fov-utilities/commit/352b71e33c0f8832d929f46c0e98e31ef16fb8fe))
+
 ### [1.0.2](https://github.com/animafps/fov-utilities/compare/v1.0.1...v1.0.2) (2021-12-15)
 
 
