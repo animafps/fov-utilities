@@ -1,9 +1,11 @@
+export type filmWithAspect = `${number}M${'L' | 'I' | 'F'}${number}`
+export type filmWithoutAspect = `${'V' | 'H'}ML`
+export type filmNotation = `${filmWithAspect | filmWithoutAspect}`
+
 /**
- *
- * @param fov
- * @param inputAspect
- * @param outputAspect
- * @returns
+ * Converts one horizontal FoV to another based on the input and output of the engine or screen aspect ratio
+ * @param inputAspect `horizontal/vertical`
+ * @param outputAspect `horizontal/vertical`
  */
 export function convertFOV(
 	fov: number,
@@ -20,11 +22,10 @@ export function convertFOV(
 }
 
 /**
- *
- * @param filmNotation
- * @returns
+ * Takes FILM notation and parses the aspect ratio parameters
+ * @returns the aspect ratio in `horizontal/vertical` format
  */
-export function filmToAspect(filmNotation: string) {
+export function filmToAspect(filmNotation: filmWithAspect) {
 	const startString = filmNotation.split(/M/)[0]
 	const endString = filmNotation.split(/M[FLI]/)[1]
 	return Number(startString) / Number(endString)
@@ -39,19 +40,22 @@ export function filmToAspect(filmNotation: string) {
  */
 export function filmToTrue(
 	fov: number,
-	film: string,
+	film: filmNotation,
 	aspectRatio: number
 ): fovValues {
-	const filmAspect = filmToAspect(film)
+	if (film as filmWithoutAspect) {
+		if (film.startsWith('H')) {
+			return lockHorizontal(fov, aspectRatio)
+		} else if (film.startsWith('V')) {
+			return lockVertical(fov, aspectRatio)
+		}
+	}
+	const filmAspect = filmToAspect(film as filmWithAspect)
 	if (/^\d{1,2}MS\d{1,2}$/.test(film)) {
 		return {
 			horizontalFOV: fov,
 			verticalFOV: convertFOV(fov, filmAspect, 1),
 		}
-	} else if (film.startsWith('H')) {
-		return lockHorizontal(fov, aspectRatio)
-	} else if (film.startsWith('V')) {
-		return lockVertical(fov, aspectRatio)
 	} else if (/^\d{1,2}ML\d{1,2}$/.test(film)) {
 		return lockVertical(fov, aspectRatio, filmAspect)
 	} else if (/^\d{1,2}MF\d{1,2}$/.test(film)) {
@@ -71,21 +75,21 @@ export function filmToTrue(
 /**
  *
  * @param param0
- * @param film
+ * @param film {@link film}
  * @param aspectRatio
  * @returns
  */
 export function trueToFILM(
 	{ horizontalFOV, verticalFOV }: fovValues,
-	film: string,
+	film: filmNotation,
 	aspectRatio: number
 ): number {
-	const filmAspect = filmToAspect(film)
 	if (/^\d{1,2}MS\d{1,2}$/.test(film) || film.startsWith('H')) {
 		return horizontalFOV
 	} else if (film.startsWith('V')) {
 		return verticalFOV
 	} else {
+		const filmAspect = filmToAspect(film as filmWithAspect)
 		return convertFOV(horizontalFOV, aspectRatio, filmAspect)
 	}
 }
@@ -138,15 +142,15 @@ export interface fovValues {
 /**
  *
  * @param fov
- * @param inFILM
- * @param outFILM
+ * @param inFILM {@link film}
+ * @param outFILM {@link film}
  * @param aspectRatio
  * @returns
  */
 export function filmToFilm(
 	fov: number,
-	inFILM: string,
-	outFILM: string,
+	inFILM: filmNotation,
+	outFILM: filmNotation,
 	aspectRatio: number
 ): number {
 	return trueToFILM(
