@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/animafps/fov-utilities/compare/v1.1.0...v1.1.2) (2021-12-22)
+
+
+### Bug Fixes
+
+* fixed aspect types and added parseFilm function ([a5d532a](https://github.com/animafps/fov-utilities/commit/a5d532ac946a1b8e10bd6c14708e530417523b96))
+
+### [1.1.1](https://github.com/animafps/fov-utilities/compare/v1.1.0...v1.1.1) (2021-12-22)
+
+
+### Bug Fixes
+
+* fixed aspect types and added parseFilm function ([a5d532a](https://github.com/animafps/fov-utilities/commit/a5d532ac946a1b8e10bd6c14708e530417523b96))
+
 ## [1.1.0](https://github.com/animafps/fov-utilities/compare/v1.0.2...v1.1.0) (2021-12-17)
 
 
