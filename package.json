@@ -42,7 +42,7 @@
 		"pretty-quick": "pretty-quick --staged --pattern '{src,tests}/**/*.ts'",
 		"postinstall": "husky install",
 		"docs": "typedoc",
-		"prepublishOnly": "pinst --disable",
+		"prepublishOnly": "pinst --disable && yarn build",
 		"postpublish": "pinst --enable"
 	},
 	"devDependencies": {
