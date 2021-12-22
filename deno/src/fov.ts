@@ -131,9 +131,6 @@ export function lockHorizontal(fov: number, aspectRatio: number): fovValues {
 	}
 }
 
-/**
- *
- */
 export interface fovValues {
 	horizontalFOV: number
 	verticalFOV: number
@@ -158,4 +155,14 @@ export function filmToFilm(
 		outFILM,
 		aspectRatio
 	)
+}
+
+/**
+ * Parses any string that is a implementation of FILM
+ * @param film a string that only contains the text that is the film notation
+ * @returns the string back or null if its not film notation
+ */
+export function parseFilm(film: string) {
+	if (!/^[HV]M[LFI]$|^\d{1,2}M[LFI]\d{1,2}$/.test(film)) return null
+	return film as filmNotation
 }
