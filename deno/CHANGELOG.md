@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/animafps/fov-utilities/compare/v1.1.2...v1.1.3) (2021-12-22)
+
+
+### Bug Fixes
+
+* fixed bug with the build not being published ([5865e68](https://github.com/animafps/fov-utilities/commit/5865e68a87d1e9989a93bfd72bfb115ab092a147))
+
 ### [1.1.2](https://github.com/animafps/fov-utilities/compare/v1.1.0...v1.1.2) (2021-12-22)
 
 
