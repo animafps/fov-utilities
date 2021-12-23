@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/animafps/fov-utilities/compare/v1.1.3...v1.1.4) (2021-12-23)
+
+
+### Bug Fixes
+
+* fixed issue with the type not supporting stretch function ([62325c8](https://github.com/animafps/fov-utilities/commit/62325c8634fdbfa204d8b876d631ac5c3a0508cc))
+
 ### [1.1.3](https://github.com/animafps/fov-utilities/compare/v1.1.2...v1.1.3) (2021-12-22)
 
 
