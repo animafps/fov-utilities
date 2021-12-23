@@ -1,4 +1,4 @@
-export type filmWithAspect = `${number}M${'L' | 'I' | 'F'}${number}`
+export type filmWithAspect = `${number}M${'L' | 'I' | 'F' | 'S'}${number}`
 export type filmWithoutAspect = `${'V' | 'H'}ML`
 export type filmNotation = `${filmWithAspect | filmWithoutAspect}`
 
