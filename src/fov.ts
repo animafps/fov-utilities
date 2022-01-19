@@ -27,7 +27,7 @@ export function convertFOV(
  */
 export function filmToAspect(filmNotation: filmWithAspect) {
 	const startString = filmNotation.split(/M/)[0]
-	const endString = filmNotation.split(/M[FLI]/)[1]
+	const endString = filmNotation.split(/M[FLIS]/)[1]
 	return Number(startString) / Number(endString)
 }
 
