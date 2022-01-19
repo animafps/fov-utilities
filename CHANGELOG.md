@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/animafps/fov-utilities/compare/v1.1.4...v1.1.5) (2022-01-19)
+
+
+### Bug Fixes
+
+* fixed bug with converting with a stretch method returning NaN ([2a0b830](https://github.com/animafps/fov-utilities/commit/2a0b8306e239cd6ab07c22b7a65e5bec4108062f))
+
 ### [1.1.4](https://github.com/animafps/fov-utilities/compare/v1.1.3...v1.1.4) (2021-12-23)
 
 

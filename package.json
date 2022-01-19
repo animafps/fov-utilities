@@ -1,6 +1,6 @@
 {
 	"name": "fov-utilities",
-	"version": "1.1.4",
+	"version": "1.1.5",
 	"license": "GPL-3.0-or-later",
 	"description": "Set of helper functions to calculate different FoVs based off the FILM notation standard of FoV scaling and aspect ratio.",
 	"main": "dist/index.js",
