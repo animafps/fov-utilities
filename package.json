@@ -14,14 +14,17 @@
 	"keywords": [
 		"field-of-view",
 		"fov",
-		"helper"
+		"helper",
+		"math",
+		"gaming",
+		"video-games"
 	],
 	"bugs": {
 		"url": "https://github.com/animafps/fov-utilities/issues"
 	},
 	"author": {
 		"name": "Anima",
-		"email": "animafps@pm.me"
+		"email": "animafps@protonmail.com"
 	},
 	"repository": {
 		"type": "git",
@@ -31,7 +34,7 @@
 	"scripts": {
 		"lint": "eslint src --ext ts --fix",
 		"format": "prettier --write {src,tests}/**/*.ts",
-		"build": "tsc -b src && gen-esm-wrapper dist/index.js dist/index.mjs",
+		"build": "tsup",
 		"build:deno": "node ./scripts/deno.mjs",
 		"clean": "tsc -b src --clean",
 		"watch": "tsc -b src -w",
@@ -56,13 +59,13 @@
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.7.0",
 		"eslint-config-prettier": "^8.3.0",
-		"gen-esm-wrapper": "^1.1.3",
 		"husky": "^7.0.4",
 		"lint-staged": "^12.1.7",
 		"pinst": "^2.1.6",
 		"prettier": "^2.5.1",
 		"pretty-quick": "^3.1.3",
 		"standard-version": "^9.3.2",
+		"tsup": "^5.11.11",
 		"typedoc": "^0.22.10",
 		"typescript": "^4.5.4"
 	},

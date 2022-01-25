@@ -27,7 +27,7 @@ export function convertFOV(
  */
 export function filmToAspect(filmNotation: filmWithAspect) {
 	const startString = filmNotation.split(/M/)[0]
-	const endString = filmNotation.split(/M[FLI]/)[1]
+	const endString = filmNotation.split(/M[FLIS]/)[1]
 	return Number(startString) / Number(endString)
 }
 
@@ -150,13 +150,14 @@ export function filmToFilm(
 	outFILM: filmNotation,
 	aspectRatio: number
 ): number {
-	return trueToFILM(
+	const result = trueToFILM(
 		filmToTrue(fov, inFILM, aspectRatio),
 		outFILM,
 		aspectRatio
 	)
+	if (Number(result)) return result
+	throw Error('NaN')
 }
-
 /**
  * Parses any string that is a implementation of FILM
  * @param film a string that only contains the text that is the film notation

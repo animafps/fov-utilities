@@ -150,13 +150,14 @@ export function filmToFilm(
 	outFILM: filmNotation,
 	aspectRatio: number
 ): number {
-	return trueToFILM(
+	const result = trueToFILM(
 		filmToTrue(fov, inFILM, aspectRatio),
 		outFILM,
 		aspectRatio
 	)
+	if (Number(result)) return result
+	throw Error('NaN')
 }
-
 /**
  * Parses any string that is a implementation of FILM
  * @param film a string that only contains the text that is the film notation
