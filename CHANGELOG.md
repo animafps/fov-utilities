@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.7](https://github.com/animafps/fov-utilities/compare/v1.1.5...v1.1.7) (2022-01-25)
+
+
+### Bug Fixes
+
+* issue with error emition and deno not being up to date ([ff0244b](https://github.com/animafps/fov-utilities/commit/ff0244b67f8276d52579041ddd69ec7a50dc5997))
+
+### [1.1.6](https://github.com/animafps/fov-utilities/compare/v1.1.5...v1.1.6) (2022-01-25)
+
+
+### Bug Fixes
+
+* issue with error emition and deno not being up to date ([ff0244b](https://github.com/animafps/fov-utilities/commit/ff0244b67f8276d52579041ddd69ec7a50dc5997))
+
 ### [1.1.5](https://github.com/animafps/fov-utilities/compare/v1.1.4...v1.1.5) (2022-01-19)
 
 
