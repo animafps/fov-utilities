@@ -49,8 +49,8 @@
 		"postpublish": "pinst --enable"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^16.1.0",
-		"@commitlint/config-conventional": "^16.0.0",
+		"@commitlint/cli": "^16.2.1",
+		"@commitlint/config-conventional": "^16.2.1",
 		"@types/eslint": "^8",
 		"@types/node": "^16.11.24",
 		"@types/prettier": "^2",
