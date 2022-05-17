@@ -19,10 +19,10 @@ jobs:
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
+        uses: github/codeql-action/init@0e9acb6e5cd338179ea69a99146ca55f796799e0 # tag=v1
 
       - name: Autobuild
-        uses: github/codeql-action/autobuild@v1
+        uses: github/codeql-action/autobuild@0e9acb6e5cd338179ea69a99146ca55f796799e0 # tag=v1
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
+        uses: github/codeql-action/analyze@0e9acb6e5cd338179ea69a99146ca55f796799e0 # tag=v1
