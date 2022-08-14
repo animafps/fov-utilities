@@ -18,7 +18,7 @@ jobs:
                   node-version: 16
                   registry-url: https://registry.npmjs.org/
             - name: Restore CI Cache
-              uses: actions/cache@48af2dc4a9e8278b89d7fa154b955c30c6aaab09 # tag=v3.0.2
+              uses: actions/cache@a7c34adf76222e77931dedbf4a45b2e4648ced19 # tag=v3.0.7
               id: cache-restore
               with:
                   path: node_modules
@@ -29,7 +29,7 @@ jobs:
             - name: Build Docs
               run: yarn docs
             - name: Deploy Docs
-              uses: JamesIves/github-pages-deploy-action@830e6a4f7c81743c52f3fed0ac67428feff9620a # tag=v4.2.5
+              uses: JamesIves/github-pages-deploy-action@13046b614c663b56cba4dda3f30b9736a748b80d # tag=v4.4.0
               with:
                   branch: gh-pages # The branch the action should deploy to.
                   folder: docs # The folder the action should deploy.
